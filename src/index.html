@@ -7,34 +7,64 @@
     <title>Simple Portfolio Website</title>
 
     <link rel="stylesheet" href="./css/output.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ecde4d1cd4.js" crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            scroll-behavior: smooth;
+        }
+
+        #about-me,
+        #skills,
+        #projects,
+        #certificates {
+            scroll-margin-top: 70px;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
 </head>
 
-<body class="bg-[#052842]">
-    <header class="fixed bg-[#052842] top-0 z-50 flex text-[#E9456C] w-full px-5 py-3">
+<body class="bg-white">
+    <header class="bg-white/15 backdrop-blur-2xl fixed top-0 z-50 flex text-[#E9456C] w-full px-5 py-3 shadow-2xl">
         <div class="container mx-auto">
             <nav class="flex w-full justify-between items-start">
                 <div class="lg:flex w-full justify-between items-center">
                     <h1 class="text-xl font-bold">My Portfolio</h1>
-                    <ul class="lg:flex hidden gap-5" id="menu">
-                        <li class="p-2">
-                            <a href="" class="">Home</a>
+                    <ul class="lg:flex hidden gap-5 font-semibold" id="menu">
+                        <li class="my-2">
+                            <a href="#home"
+                                class="max-lg:block hover:bg-[#E9456C] hover: p-2 transition-all duration-300 ease-in-out rounded">
+                                Home
+                            </a>
                         </li>
-                        <li class="p-2">
-                            <a href="" class="">About Me</a>
+                        <li class="my-2">
+                            <a href="#about-me"
+                                class="max-lg:block hover:bg-[#E9456C] hover: p-2 transition-all duration-300 ease-in-out rounded">
+                                About Me
+                            </a>
                         </li>
-                        <li class="p-2">
-                            <a href="" class="">Skills</a>
+                        <li class="my-2">
+                            <a href="#skills"
+                                class="max-lg:block hover:bg-[#E9456C] hover: p-2 transition-all duration-300 ease-in-out rounded">Skills</a>
                         </li>
-                        <li class="p-2">
-                            <a href="" class="">Projects</a>
+                        <li class="my-2">
+                            <a href="#projects"
+                                class="max-lg:block hover:bg-[#E9456C] hover: p-2 transition-all duration-300 ease-in-out rounded">Projects</a>
                         </li>
-                        <li class="p-2">
-                            <a href="" class="">Certificates</a>
+                        <li class="my-2">
+                            <a href="#certificates"
+                                class="max-lg:block hover:bg-[#E9456C] hover: p-2 transition-all duration-300 ease-in-out rounded">Certificates</a>
                         </li>
                     </ul>
                 </div>
-                <button class="lg:hidden p-2" onclick="toggleMenu()">
-                    <i class="fa fa-bars"></i>
+                <button class="lg:hidden" onclick="toggleMenu()">
+                    <i
+                        class="fa fa-bars hover:bg-[#E9456C] hover: p-2 transition-all duration-300 ease-in-out cursor-pointer rounded"></i>
                 </button>
             </nav>
         </div>
@@ -43,57 +73,134 @@
     <main class="container mx-auto px-5">
 
         <!-- Hero Section -->
-        <section class="grid lg:grid-cols-2 items-center h-[100dvh]">
-            <div class="text-white">
-                <h3 class="text-xl">Hi! I'am,</h3>
-                <h1 class="text-5xl text-[#E9456C] font-bold">AHMAD SANI JABARULLOH</h1>
-                <h2 class="text-3xl font-semibold">Front-End Developer</h2>
-                <div class="my-2">
-                    <a href="" class="">
-                        <i class="fa fa-instagram bg-white/10 p-2 text-2xl rounded-full"></i>
-                    </a>
-                    <a href="" class="">
-                        <i class="fa fa-github bg-white/10 p-2 text-2xl rounded-full"></i>
-                    </a>
-                    <a href="" class="">
-                        <i class="fa fa-linkedin bg-white/10 p-2 text-2xl rounded-full"></i>
-                    </a>
+        <section
+            class="flex flex-col lg:flex-row lg:justify-between lg:items-center justify-center max-lg:gap-16 h-[100dvh]"
+            id="home">
+            <div class="">
+                <h3 class="md:text-lg lg:text-xl">Hi!</h3>
+                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#E9456C] font-bold">
+                    <span class="text-black">I'am,</span> AHMAD SANI JABARULLOH
+                </h1>
+                <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">Front-End Developer</h2>
+                <div class="flex my-2 items-center gap-5">
+                    <div class="">
+                        <a href=""
+                            class="bg-[#E9456C] hover:bg-[#96203c]  hover:text-[#052842] font-semibold px-7 py-3 transition-all duration-300 ease-in-out rounded-full">
+                            Download CV
+                        </a>
+                    </div>
+                    <div class="flex gap-2">
+                        <a href="" class="">
+                            <i class="fa fa-instagram bg-white/10 p-2 text-2xl rounded-full"></i>
+                        </a>
+                        <a href="" class="">
+                            <i class="fa fa-github bg-white/10 p-2 text-2xl rounded-full"></i>
+                        </a>
+                        <a href="" class="">
+                            <i class="fa fa-linkedin bg-white/10 p-2 text-2xl rounded-full"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             <aside class="">
-                <img src="./../public/image/profil.png" alt=""
-                    class="flex justify-self-center lg:justify-self-end w-96 h-96 rounded-full">
+                <img src="./../public/assets/profil.png" alt=""
+                    class="flex justify-self-center lg:justify-self-end w-96 h-96 2xl:w-[30rem] 2xl:h-[30rem] rounded-full">
             </aside>
         </section>
 
         <!-- About Me Section -->
-        <section class="my-10">
+        <div class="lg:bg-black/90 flex flex-col lg:flex-row lg:shadow-2xl lg:p-10 lg:gap-10 my-20 rounded-2xl">
+            <aside class="bg-black/95 max-lg:hidden rounded-2xl">
+                <img src="./../public/assets/photoProffesional.png" alt=""
+                    class="w-full h-full object-cover rounded-2xl">
+            </aside>
             <div class="">
-                <h2 class="text-3xl text-white font-bold text-center">About Me</h2>
-                <div class="bg-[#E9456C] h-1 w-1/12 mx-auto"></div>
+                <section class="max-lg:bg-black/90 max-lg:shadow-2xl max-lg:p-10 max-lg:my-20 max-lg:rounded-2xl"
+                    id="about-me">
+                    <div class="">
+                        <h2 class="text-3xl text-white font-bold">About Me</h2>
+                        <div class="bg-[#E9456C] h-1 w-1/12"></div>
+                    </div>
+                    <div class="my-5">
+                        <p class="text-white text-justify">
+                            I am a Software Engineering graduate with experience in front-end website development using
+                            Next.js,
+                            React.js, Laravel, and Tailwind CSS. I am comfortable working in a team, quick to adapt, and
+                            skilled
+                            in building responsive UIs.
+                        </p>
+                    </div>
+                </section>
+                <section class="max-lg:shadow-2xl max-lg:p-10 max-lg:my-20 max-lg:rounded-2xl">
+                    <div class="">
+                        <h2 class="text-3xl lg:text-white font-bold">Skills</h2>
+                        <div class="bg-[#E9456C] h-1 w-1/12"></div>
+                    </div>
+                    <div class="my-5">
+                        <p class="lg:text-white">The following are the main technical skills I have mastered, including programming
+                            languages, frameworks/libraries, and databases.</p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <section class="shadow-2xl p-10 my-20 rounded-2xl" id="projects">
+            <div class="">
+                <h2 class="text-3xl font-bold">Projects</h2>
+                <div class="bg-[#E9456C] h-1 w-1/12"></div>
             </div>
             <div class="my-5">
-                <p class="text-white">
-                    I am a Software Engineering graduate with experience in front-end website development using Next.js,
-                    React.js, Laravel, and Tailwind CSS. I am comfortable working in a team, quick to adapt, and skilled
-                    in building responsive UIs.
+                <p class="text-white my-5">
+                    Here are some projects I have worked on that demonstrate my skills and experience in the field of
+                    technology.
                 </p>
-            </div>
-        </section>
+                <div class="flex snap-mandatory overflow-auto">
+                    <div class="flex shrink-0 gap-10">
 
-        <!-- Skills Section -->
-        <section class="my-10">
-            <div class="">
-                <h2 class="text-3xl text-white font-bold text-center">Skills</h2>
-                <div class="bg-[#E9456C] h-1 w-1/12 mx-auto"></div>
+                        <div class="bg-white w-96 rounded-2xl">
+                            <img src="./../public/assets/projects/books-marketplace.png" alt=""
+                                class="w-full rounded-t-2xl">
+                            <div class="p-2">
+                                <div class="">
+                                    <div class="">
+                                        <h1 class=" text-2xl font-bold">Books Marketplace</h1>
+                                        <div class="bg-[#E9456C] h-1 mx-auto rounded-full"></div>
+                                    </div>
+                                    <p class="text-gray-600 text-justify">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing
+                                        elit. Dignissimos
+                                        voluptate quam illum quasi delectus expedita! Earum, porro ut, ipsa harum soluta
+                                        pariatur at modi necessitatibus vero, esse ad deserunt repudiandae!</p>
+                                </div>
+                                <div class="flex justify-self-end gap-2">
+                                    <div class="bg-[#E9456C]  px-7 py-3 rounded-full">
+                                        <i class="fa fa-code"></i>
+                                        <a href="" class="">Code</a>
+                                    </div>
+                                    <div class="bg-[#E9456C]  px-7 py-3 rounded-full">
+                                        <i class="fa fa-code"></i>
+                                        <a href="" class="">Visit</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <script src="./js/script.js"></script>
+    <footer class="px-5 py-3">
+        <div class="container mx-auto">
+            <p class=" text-center">&copy; 2024 Sannn Developer. All rights reserved.</p>
+        </div>
+    </footer>
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/ecde4d1cd4.js" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
